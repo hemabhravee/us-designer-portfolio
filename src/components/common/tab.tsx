@@ -26,7 +26,7 @@ const TabButton: FunctionComponent<TabProps> = ({ tabData }: TabProps) => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: colors.darkerLightGreen,
-        color: isSelected ? colors.darkRed : colors.teal1,
+        color: isSelected ? colors.darkRed : colors.darkTeal,
         borderBottom: isSelected ? `2px solid ${colors.darkRed}`: "none"
       }}
       onClick={() => {
