@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import './App.css'
+import './fonts.css'
 import HomePage from './pages/home-page'
 import PageNotFoundPage from './pages/page-not-found-page'
 import { RouteConstants } from './constants/route-constants'

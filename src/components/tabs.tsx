@@ -16,7 +16,7 @@ const tabs: TabData[] = [
     route: RouteConstants.home,
   },
   {
-    label: "About Mes",
+    label: "About Me",
     tab: Tab.ABOUT_ME,
     route: RouteConstants.aboutMe,
   },

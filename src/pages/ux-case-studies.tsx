@@ -5,7 +5,7 @@ import HomePageSubHeading from "../components/common/sub-heading";
 import Tabs from "../components/tabs";
 import Projects from "../components/home-page/projects";
 import { projects } from "../constants/projects";
-import { colors } from "../constants/colors";
+import MainCard from "../components/MainCard";
 
 interface UxCaseStudiesProps {
 
@@ -14,19 +14,12 @@ interface UxCaseStudiesProps {
 const UxCaseStudies: FunctionComponent<UxCaseStudiesProps> = () => {
   return (
     <Layout>
-    <div style={{
-      backgroundColor: colors.lightGreen,
-      display: "Flex",
-      flexDirection: "column",
-      gap: "50px",
-      padding: "100px 160px",
-      borderRadius: "20px"
-    }}>
+    <MainCard>
       <HomePageHeading />
       <HomePageSubHeading />
       <Tabs />
       <Projects projects={projects}/>
-    </div>
+    </MainCard>
   </Layout>
   );
 }

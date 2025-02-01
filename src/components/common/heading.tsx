@@ -10,7 +10,10 @@ const HomePageHeading: FunctionComponent = () => {
     <br />
     <div style={{display: "flex", justifyContent: "space-between"}}>
       <div className="text-[40px] " style={{ fontFamily: fonts.alteHaasGrotesk }}>Pejathaya</div>{" "}
-      <div className="text-[40px] " style={{ fontFamily: fonts.danielSans }}>& I do</div>{" "}
+      <div className="flex gap-4">
+        <div className="text-[40px] " style={{ fontFamily: fonts.alteHaasGrotesk }}>&</div>{" "}
+        <div className="text-[40px] " style={{ fontFamily: fonts.danielSans }}>I do</div>{" "}
+      </div>
       <div className="text-[40px] " style={{ fontFamily: fonts.alteHaasGrotesk }}>UX Research</div>
     </div>
     <br />

@@ -3,24 +3,17 @@ import HomePageHeading from "../components/common/heading";
 import HomePageSubHeading from "../components/common/sub-heading";
 import Tabs from "../components/tabs";
 import Layout from "../components/layout";
-import { colors } from "../constants/colors";
+import MainCard from "../components/MainCard";
 
 
 const AboutMe: FunctionComponent = () => {
   return (
     <Layout>
-      <div style={{
-        backgroundColor: colors.lightGreen,
-        display: "Flex",
-        flexDirection: "column",
-        gap: "50px",
-        padding: "100px 160px",
-        borderRadius: "20px"
-      }}>
+      <MainCard >
         <HomePageHeading />
         <HomePageSubHeading />
         <Tabs />
-      </div>
+      </MainCard>
     </Layout>
   );
 }
