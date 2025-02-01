@@ -15,7 +15,7 @@ const MainCard: FunctionComponent<LayoutProps> = ({children, style}: LayoutProps
         display: "Flex",
         flexDirection: "column",
         gap: "60px",
-        padding: "100px 17%",
+        padding: "100px 16%",
         borderRadius: "20px",
         color: colors.darkTeal,
         // height: "80vh",
