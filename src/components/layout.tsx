@@ -1,4 +1,6 @@
 import { FunctionComponent } from "react";
+import backgroundImage from '/src/assets/background.png'
+
 
 interface LayoutProps {
   children?: React.ReactNode;
@@ -15,7 +17,7 @@ const Layout: FunctionComponent<LayoutProps> = ({children, style}: LayoutProps) 
         padding: "80px 12.5%",
         minHeight: "100vh", // Changed from height to minHeight
         width: "100%",      // Changed from 100vw to 100%
-        backgroundImage: `url("../assets/background.png")`,
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",  // Added to ensure image covers the container
         backgroundPosition: "center", // Added to center the background
         backgroundRepeat: "no-repeat", // Prevents image from repeating
