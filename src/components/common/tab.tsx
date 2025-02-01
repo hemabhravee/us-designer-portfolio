@@ -12,9 +12,7 @@ interface TabProps {
 const TabButton: FunctionComponent<TabProps> = ({ tabData }: TabProps) => {
   const navigate = useNavigate();
 
-  const isSelected = useMemo(() => {
-    return tabStore.currentTab === tabData.tab;
-  }, [tabStore.currentTab, tabData]);
+  const isSelected = tabStore.currentTab === tabData.tab;
 
   return (
     <div
