@@ -20,6 +20,7 @@ const TabButton: FunctionComponent<TabProps> = ({ tabData }: TabProps) => {
     <div
       className="transition-all duration-300 ease-in-out"
       style={{
+        borderRadius: "4px",
         width: "190px",
         height: "42px",
         display: 'flex',
@@ -31,7 +32,7 @@ const TabButton: FunctionComponent<TabProps> = ({ tabData }: TabProps) => {
         fontFamily: isSelected || isHovering ? fonts.danielSans : fonts.alteHaasGrotesk,
         borderBottom: isSelected ? `2px solid ${colors.darkRed}` : "none",
         fontSize: isSelected || isHovering ? "22px" : "18px",
-        transition: "color 0.2s ease, border-bottom 0.2s ease, font-weight 100ms ease-in-out, font-family 100ms ease-in-out, font-size 100ms ease-in-out, height 100ms ease-in-out"
+        transition: "color 0.2s ease, border-bottom 0.2s ease, font-weight 100ms ease-in-out, font-family 100ms ease-in-out, font-size 200ms ease-in-out, height 100ms ease-in-out"
       }}
       onClick={() => {
         tabStore.setCurrentTab(tabData.tab);

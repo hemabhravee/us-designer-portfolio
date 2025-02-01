@@ -10,6 +10,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ project }: ProjectCa
   return (<div style={{
     width: "100%",
     // height: "472px",
+    borderRadius: "6px",
     padding: "22px",
     display: 'flex',
     flexDirection: "column",
