@@ -31,7 +31,7 @@ const HomePageHeading: FunctionComponent = () => {
       <div style={{...haasStyle, width: "auto"}}>UX Research</div>
     </div>
     <div style={{ ...haasStyle, textAlign: "end"}}>& Design</div>
-    <div style={{ ...danielStyle, textAlign: "end", transform: "translateY(-5px)" }}>really well!</div>
+    <div style={{ ...danielStyle, textAlign: "end" }}>really well!</div>
   </div>;
 }
 
