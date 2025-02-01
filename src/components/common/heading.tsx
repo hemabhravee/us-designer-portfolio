@@ -4,7 +4,7 @@ import { fonts } from "../../constants/fonts";
 const danielStyle: React.CSSProperties = {
   width: "100%",
   fontFamily: fonts.danielSans,
-  fontSize: "40px"
+  fontSize: "40px",
 }
 const haasStyle: React.CSSProperties = {
   width: "100%",
