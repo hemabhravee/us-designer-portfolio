@@ -12,7 +12,7 @@ const Layout: FunctionComponent<LayoutProps> = ({children, style}: LayoutProps) 
       // className="min-h-screen overflow-x-hidden overscroll-none"
       style={{
         overscrollBehaviorY: "none",
-        padding: "80px 180px",
+        padding: "80px 12.5%",
         minHeight: "100vh", // Changed from height to minHeight
         width: "100%",      // Changed from 100vw to 100%
         backgroundImage: `url("src/assets/background.png")`,

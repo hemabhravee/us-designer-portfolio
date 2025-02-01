@@ -15,8 +15,9 @@ const MainCard: FunctionComponent<LayoutProps> = ({children, style}: LayoutProps
         display: "Flex",
         flexDirection: "column",
         gap: "40px",
-        padding: "50px 160px",
+        padding: "50px 12.5%",
         borderRadius: "20px",
+        color: colors.darkTeal,
         // height: "80vh",
         ...style  // Fixed the spread operator syntax
     }}>
