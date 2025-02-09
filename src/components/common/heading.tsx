@@ -1,38 +1,115 @@
 import { FunctionComponent } from "react";
+import styled from "styled-components";
 import { fonts } from "../../constants/fonts";
 
-const danielStyle: React.CSSProperties = {
-  width: "100%",
-  fontFamily: fonts.danielSans,
-  fontSize: "40px",
-  marginBottom: "-20px", // Add negative margin to reduce space
+const DanielText = styled.div`
+  width: 100%;
+  font-family: ${fonts.danielSans};
+  font-size: 40px;
+  margin-bottom: -20px;
+
+  @media (min-width: 640px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 36px;
+  }
+
+`;
+
+interface LayoutProps {
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-const haasStyle: React.CSSProperties = {
-  width: "100%",
-  fontFamily: fonts.alteHaasGrotesk,
-  fontWeight: "bold",
-  fontSize: "52px",
-  marginBottom: "-15px", // Add negative margin to reduce space
-}
+const HaasText = styled.div<Pick<LayoutProps, 'style'>>`
+  width: 100%;
+  font-family: ${fonts.alteHaasGrotesk};
+  font-weight: bold;
+  font-size: 52px;
+  margin-bottom: -15px;
+  line-height: 4rem;
+
+  @media (min-width: 640px) {
+    font-size: 36px;
+    line-height: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 3.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 44px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 52px;
+    line-height: 5rem;
+  }
+
+  ${props => props.style && { ...props.style }}
+`;
+
+const RowDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -15px;
+  transform: translateY(-10px);
+
+  @media (min-width: 640px) {
+    font-size: 44px;
+    justify-content: start;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 44px;
+    justify-content: start;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 44px;
+    gap: 20px;
+    padding-bottom: 0px;
+  }
+  @media (min-width: 1280px) {
+    gap: 0px;
+    justify-content: space-between;
+  }
+`;
 
 const HomePageHeading: FunctionComponent = () => {
-  return <div style={{display: "flex", flexDirection: "column"}}>
-    <div style={danielStyle}>I'm</div>
-    <div style={haasStyle}>Maithreyi</div>
-    <div style={{
-      display: "flex",
-      justifyContent: "space-between",
-      marginBottom: "-15px", // Add negative margin
-      transform: "translateY(-10px)" // Adjust vertical position
-    }}>
-      <div style={{...haasStyle, width: "auto"}}>Pejathaya</div>
-      <div style={{...danielStyle, width: "auto", textWrap: "nowrap", transform: "translateY(20px)"}}>and I do</div>
-      <div style={{...haasStyle, width: "auto"}}>UX Research</div>
+  return (
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <DanielText>I'm</DanielText>
+      <HaasText>Maithreyi</HaasText>
+      <RowDiv>
+        <HaasText style={{ width: "auto", marginTop: '10px' }}>Pejathaya</HaasText>
+        <DanielText
+          style={{
+            width: "auto",
+            textWrap: "nowrap",
+            transform: "translateY(20px)",
+          }}
+        >
+          and I do
+        </DanielText>
+        {window.innerWidth >= 1280 && (
+          <HaasText style={{ width: "auto" }}>UX Research</HaasText>
+        )}
+      </RowDiv>
+      {window.innerWidth < 1280 && (
+          <HaasText style={{ width: "auto", alignSelf: 'end' }}>UX Research</HaasText>
+        )}
+      <HaasText style={{ textAlign: "end" }}>& Design</HaasText>
+      <DanielText style={{ textAlign: "end" }}>really well!</DanielText>
     </div>
-    <div style={{ ...haasStyle, textAlign: "end"}}>& Design</div>
-    <div style={{ ...danielStyle, textAlign: "end" }}>really well!</div>
-  </div>;
-}
+  );
+};
 
 export default HomePageHeading;
