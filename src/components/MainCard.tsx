@@ -25,8 +25,8 @@ const StyledDiv = styled.div`
   }
 
   @media (min-width: 1024px) {
-    gap: 20px;
-    padding: 30px 15%;
+    gap: 40px;
+    padding: 30px 15% 60px 15%;
   }
 
   @media (min-width: 1280px) {
